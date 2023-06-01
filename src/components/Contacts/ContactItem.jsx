@@ -1,4 +1,5 @@
 import css from './Contacts.module.css';
+import PropTypes from 'prop-types';
 
 const ContactItem = ({ deleteContact, id, number, name }) => {
   return (
@@ -12,3 +13,10 @@ const ContactItem = ({ deleteContact, id, number, name }) => {
 };
 
 export default ContactItem;
+
+ContactItem.propTypes = {
+  deleteContact: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};

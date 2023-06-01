@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 import css from './Phonebook.module.css';
+import PropTypes from 'prop-types';
 
 export default class Phonebook extends Component {
   state = {
@@ -63,3 +64,7 @@ export default class Phonebook extends Component {
     );
   }
 }
+
+Phonebook.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
